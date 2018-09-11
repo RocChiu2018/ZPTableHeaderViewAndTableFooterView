@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZPLoadMoreFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0D-Q5-XFy">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="点击按钮加载">
+                        <color key="titleColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickLoadMoreButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="2Sp-P2-9iU"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8n-xq-LxF">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="正在加载更多数据..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA4-yr-jxx">
+                            <rect key="frame" x="92.5" y="14.5" width="115.5" height="16"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.96055898500000003" green="1" blue="0.27272261339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ImK-q5-jWr">
+                            <rect key="frame" x="62.5" y="12" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="0fU-9G-GyT"/>
+                                <constraint firstAttribute="width" constant="20" id="6ax-5l-JZ7"/>
+                            </constraints>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93982863400000005" green="0.338274994" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="dA4-yr-jxx" firstAttribute="centerX" secondItem="I8n-xq-LxF" secondAttribute="centerX" id="Ne7-KN-8Bb"/>
+                        <constraint firstItem="dA4-yr-jxx" firstAttribute="leading" secondItem="ImK-q5-jWr" secondAttribute="trailing" constant="10" id="Wdw-zw-EQR"/>
+                        <constraint firstItem="dA4-yr-jxx" firstAttribute="centerY" secondItem="I8n-xq-LxF" secondAttribute="centerY" id="lpg-Wi-pJ8"/>
+                        <constraint firstItem="ImK-q5-jWr" firstAttribute="centerY" secondItem="I8n-xq-LxF" secondAttribute="centerY" id="zzU-AJ-ztt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="I8n-xq-LxF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8Tj-el-h0a"/>
+                <constraint firstItem="N0D-Q5-XFy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="I9M-C1-5UZ"/>
+                <constraint firstItem="I8n-xq-LxF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KR8-Hf-Gpy"/>
+                <constraint firstAttribute="trailing" secondItem="I8n-xq-LxF" secondAttribute="trailing" id="MMU-eh-Rhu"/>
+                <constraint firstAttribute="bottom" secondItem="I8n-xq-LxF" secondAttribute="bottom" id="RAk-e3-QRr"/>
+                <constraint firstItem="N0D-Q5-XFy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UMU-Aq-fGh"/>
+                <constraint firstAttribute="trailing" secondItem="N0D-Q5-XFy" secondAttribute="trailing" id="Yqi-dj-dJF"/>
+                <constraint firstAttribute="bottom" secondItem="N0D-Q5-XFy" secondAttribute="bottom" id="YtQ-yq-4HR"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="loadMoreButton" destination="N0D-Q5-XFy" id="XKV-fr-V0Z"/>
+                <outlet property="loadingMoreView" destination="I8n-xq-LxF" id="OtE-be-Cmg"/>
+            </connections>
+            <point key="canvasLocation" x="-113" y="196"/>
+        </view>
+    </objects>
+</document>
